@@ -28,6 +28,8 @@ micronaut {
 
 dependencies {
   implementation('io.micronaut:micronaut-runtime')
+
+  runtimeOnly('ch.qos.logback:logback-classic')
 }
 
 application {
