@@ -28,6 +28,7 @@ micronaut {
 
 dependencies {
   implementation('io.micronaut:micronaut-runtime')
+  implementation('io.micronaut.data:micronaut-data-hibernate-jpa')
 
   runtimeOnly('ch.qos.logback:logback-classic')
 }
