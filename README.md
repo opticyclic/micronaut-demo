@@ -20,3 +20,10 @@ Call the API to check the application is working
 
     curl -X POST "http://localhost:8080/accounts" -H  "Content-Type: application/json" -d '{"name": "John Doe", "type": "CURRENT", "age": "25"}'
     curl http://localhost:8080/accounts
+
+## Testing
+
+The Micronaut test framework has JUnit and Spock annotations for intialising tests, creating mock beans and injecting
+beans etc.
+
+However, it doesn't have these helpers for TestNG, so you need to initialise thm manually as required.
