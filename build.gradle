@@ -1,0 +1,35 @@
+plugins {
+  id 'io.micronaut.application' version '2.0.3'
+  //Required to create a fat jar for running
+  id('com.github.johnrengelman.shadow') version '7.0.0'
+}
+
+group = 'com.github.opticyclic.micronaut.demo'
+description = 'A simple REST API demo with Micronaut'
+version = '1.0.0-SNAPSHOT'
+
+wrapper {
+  distributionType = Wrapper.DistributionType.ALL
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+  mavenCentral()
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+micronaut {
+  runtime('netty')
+}
+
+dependencies {
+  implementation('io.micronaut:micronaut-runtime')
+}
+
+application {
+  mainClass.set('com.github.opticyclic.micronaut.demo.Application')
+}
