@@ -26,4 +26,20 @@ Call the API to check the application is working
 The Micronaut test framework has JUnit and Spock annotations for intialising tests, creating mock beans and injecting
 beans etc.
 
-However, it doesn't have these helpers for TestNG, so you need to initialise thm manually as required.
+However, it doesn't have these helpers for TestNG, so you need to initialise them manually as required.
+
+### JUnit
+
+Micronaut adds an annotation `@MicronautTest` for JUnit tests, but in order to run with these you need to add the
+testRuntime to the micronaut block in the build.gradle.
+
+    micronaut {
+      runtime('netty')
+      testRuntime('junit5')
+    }
+
+The annotations come from the `'io.micronaut.test:micronaut-test-junit5'` dependency, however, Micronaut adds it
+automatically when you modify the micronaut block.
+
+**NB:** Adding the testRuntime to the micronaut block causes TestNG tests to not be found by gradle - even though the
+IDEA test runner finds and runs them just fine.
