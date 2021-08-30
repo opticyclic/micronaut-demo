@@ -3,7 +3,8 @@
 Micronaut [https://docs.micronaut.io/latest/guide/index.html] is a fast starting framework for microservices and
 serverless code similar to Spring Boot.
 
-This project demonstrates creating a simple REST API that saves data in h2 with minimal code.
+This project demonstrates creating a simple REST API that saves data in h2 with minimal code.  
+It also shows running the tests with TestNG instead of JUnit which is in most of their docs.
 
 ## Development
 
